@@ -1,0 +1,26 @@
+{% include "include/head.html" %}
+    <section>
+    <img class="loginlogo" src="/assets/img/logo.png" alt="로고">
+    <p>입맛저격! 뭐먹지</p>
+    <p>유저1 님에게 꼭 맞는 메뉴 추천을</p>
+    <p>위해 입력해주세요!</p>
+    <form action="/signup/step1/health" method="post">
+        <input type="hidden" name="name" value="{{name}}">
+        <input type="hidden" name="age" value="{{age}}">
+        <input type="hidden" name="gender" value="{{gender}}">
+        <input type="hidden" name="height" value="{{height}}">
+        <input type="hidden" name="weight" value="{{weight}}">
+        <div class="stepbox">STEP 1</div>
+        <p>1. 건강정보</p>
+        <p>질환</p>
+        <input type="text" name="disease">
+        <p>알레르기</p>
+        <input type="text" name="allergy">
+        <div class="mens" name="mens"></div>
+        <a href="/signup/step1/info">
+            <button type="button">이전</button>
+        </a>
+        <button type="submit">다음</button>
+    </form>
+    </section>
+{% include "include/footer.html" %}

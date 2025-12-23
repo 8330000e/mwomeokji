@@ -1,0 +1,15 @@
+{% include "include/head.html" %}
+        <nav>
+        <button class="prev"><a href="/login/view"><i class="fa-solid fa-angle-left fa-2xl" style="color: #ff5d2d;"></i></a></button>
+        </nav>
+        <section>
+        <div class="loginview">
+            <form action="/login/login" method="post">
+                <input type="text" name="uemail" placeholder="이메일">
+                <input type="password" name="upw_hash" placeholder="비밀번호">
+                <a>이메일 또는 비밀번호를 잊으셨나요?</a>
+                <button type="submit">로그인</button>
+            </form>
+        </div>
+        </section>
+{% include "include/footer.html" %}

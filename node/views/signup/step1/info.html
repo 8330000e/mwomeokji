@@ -1,0 +1,29 @@
+{% include "include/head.html" %}
+    <section>
+    <script>
+        
+    </script>
+    <img class="loginlogo" src="/assets/img/logo.png" alt="로고">
+    <p>입맛저격! 뭐먹지</p>
+    <p>유저1 님에게 꼭 맞는 메뉴 추천을</p>
+    <p>위해 입력해주세요!</p>
+    <form action="/signup/step1/info" method="post">
+         <div class="stepbox">STEP 1</div>
+         <p>1. 건강정보</p>
+            <p>이름</p>
+            <input type="text" name="name" required>
+            <p>나이</p>
+            <input type="number" name="age" placeholder="만 나이로 입력해주세요!" required>
+            <p>성별</p>
+            <select class="gender" name="gender" required>
+                <option value="male">남성</option>
+                <option value="female">여성</option>
+            </select>
+            <p>키</p>
+            <input type="number" name="height" required>
+            <p>체중</p>
+            <input type="number" name="weight" required>
+        <button type="submit">다음</button>
+    </form>
+    </section>
+{% include "include/footer.html" %}

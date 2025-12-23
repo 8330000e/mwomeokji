@@ -1,0 +1,42 @@
+{% include "include/head.html" %}
+    <nav>
+        <button class="menu"><a href="/setting/menu"><i class="fa-solid fa-bars fa-xl"
+                        style="color: #ff5d2d;"></i></a></button>
+    </nav>
+    <section>
+    <header>
+        {% include "include/timemsg.html" %}
+    </header>
+    <div class="mainmenu">
+    <ul>
+        <li>
+            <a href="/keywordMenu">
+                <p class="oneline">#키워드로 고르기</p>
+                <p class="optitle">🍚 뭐먹지?</p>
+            </a>
+        </li>
+        <li>
+            <a href="/randomMenu">
+                <p class="oneline">#랜덤! 복불복!</p>
+                <p class="optitle">🎉 랜덤추천</p>
+            </a>
+        </li>
+        <li>
+            <a href="/groupMenu">
+                <p class="oneline">#우리 뭐먹냐</p>
+                <p class="optitle">😎 단체메뉴</p>
+            </a>
+        </li>
+        <li>
+            <a href="/dietMenu/diet">
+                <p class="oneline">#다이어트 화이팅!</p>
+                <p class="optitle">🥗 다이어트 식단</p>
+            </a>
+        </li>
+    </ul>
+    </div>
+    </section>
+    <footer>
+    ⓒ2025, 경인여대 소프트웨어융합학과 모짜조
+    </footer>
+{% include "include/footer.html" %}

@@ -1,0 +1,15 @@
+{% include "include/head.html" %}
+    <section>
+    <img class="loginlogo" src="/assets/img/logo.png" alt="로고">
+    <p>입맛저격! 뭐먹지</p>
+    <p>유저1 님에게 꼭 맞는 메뉴 추천을</p>
+    <p>위해 입력해주세요!</p>
+    <form action="/signup/step2/activity" method="post">
+        <div class="stepbox">STEP 2</div>
+         <p>유저1 님의 건강정보를 알려주세요!</p>
+        <a href="/signup/step1/health">
+            <button type="button">이전</button>
+        </a>
+        <button type="submit">다음</button>
+    </form>
+{% include "include/footer.html" %}

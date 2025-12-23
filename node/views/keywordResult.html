@@ -1,0 +1,49 @@
+{% include "include/head.html" %}
+    <nav>
+        <button class="prev"><a href="/keywordMenu"><i class="fa-solid fa-angle-left fa-2xl" style="color: #ff5d2d;"></i></a></button>
+    </nav>
+    <section>
+    <!-- <header>
+        {% include "include/timemsg.html" %}
+    </header> -->
+    <div class="keywordmenu">
+        {% if (results != null) and (results != '') %}
+            {% for item in results %}
+            <div class="box">
+                <ul>
+                    <li><button>
+                        <div class="keyrecord">
+                            <b class="title">{{ item.food }}</b>
+                            <p class="keyword">{{ item.keyword }}</p>
+                            <p class="score">매칭수: {{ item.match_count }}</p>
+                        </div>
+                    </button></li>
+                </ul>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>추천된 키워드가 없습니다.</p>
+        {% endif %}
+                <script>
+                    const modal = document.querySelector('.filter_modal');
+                    const btnOpenModal=document.querySelector('.btn-open-modal');
+
+                    btnOpenModal.addEventListener("click", ()=>{
+                        modal.style.display="flex";
+                    });
+                    
+                    const xbutton=document.querySelector('.modalxbutton');
+                    xbutton.addEventListener("click", ()=>{
+                        modal.style.display="none";
+                    });
+
+                    const xbuttons=document.querySelectorAll('.xbutton');
+                    xbuttons.forEach((button)=>{
+                        button.addEventListener("click", ()=>{
+                            button.parentElement.remove();
+                        });
+                    });
+                </script>   
+    </div>
+    </section>
+{% include "include/footer.html" %}
